@@ -1,0 +1,6 @@
+Credentials cache: API:3123952C-2D02-4C35-89C0-1CD343C530CD
+        Principal: jtian@HIVE.FI
+
+  Issued                Expires               Principal
+Feb  4 19:43:45 2020  Feb  5 05:43:45 2020  krbtgt/HIVE.FI@HIVE.FI
+Feb  4 19:47:50 2020  Feb  5 05:43:45 2020  host/vogsphere.hive.fi@HIVE.FI
