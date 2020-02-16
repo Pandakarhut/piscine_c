@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jtian <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/06 22:32:30 by jtian             #+#    #+#             */
+/*   Updated: 2020/02/06 23:24:59 by jtian            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void ft_putchar(char c)
+
+void    ft_print_comb(void)
+{
+    int first;
+    int second;
+    int third;
+
+    first = 0;
+
+    while (first <= 7)
+    {
+        second = first + 1;
+        while (second <= 8)
+        {
+            third = second + 1;
+            while (third <= 9)
+            {
+                ft_putchar(first+'0');
+                ft_putchar(second+'0');
+                ft_putchar(third+'0');
+
+                if (first + second + third < 24)
+                {
+                    ft_putchar(',');
+                    ft_putchar(' ');
+                }
+            }
+            third++;
+        }
+        second++;
+    }
+    first++;
+}
+
