@@ -21,19 +21,15 @@ int main(int argc, char **argv)
 				//We need to check if it's the first character first in the condition, because if it is, we can't check i-1 (doesn't exist). 
 				//If i is 0, it won't even try to check the rest of the condition
 				if (i == 0 || argv[1][i-1] == ' ' || argv[1][i-1] == '\t')
-				{
 					index = i; //Set the index of the last word so far..
-				}
 			}
 			i++;
 		}
 		
-		//Okay we looped through the whole string and now index is the index of the last word. Just print the word.
-		while(argv[1][index])
-		{
-			write(1, &(argv[1][index]), 1);
-			index++;
-		}
+		//Okay we looped through the whole string and now index is the index of the last word. Just print the word as long as index is bigger than -1
+		while(index > -1 && argv[1][index])
+			write(1, &(argv[1][index++]), 1); //Write and move index to next
+
 	}
 	write(1, "\n", 1);
 	return(0);
