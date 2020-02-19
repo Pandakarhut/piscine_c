@@ -1,25 +1,23 @@
-int ft_atoi(char *str)
+int ft_atoi(char *s)
 {
-  int negative;
-  int i;
-  
-  negative = 1;
-  i = 0;
-  while (*str == ' ' || *str == '\n' || *str == '\t' ||
-            *str == '\r' || *str == '\f' || *str == '\v')
+  int sign;
+  int r;
+
+  r = 0;
+  sign = 1;
+
+  while (*s == 32 || (*s >= 9 && *s <= 13))
+    s++;
+  if (*s == '-' || *s == '+')
   {
-    str++;
+    if (*s == '-')
+      sign = -1;
+    s++;
   }
-  if (*str == '-')
-    negative = -1;
-  if (*str == '-' || *str == '+')
-    str++;
-  if (*str < 48 || *str > 57)
-    return(0); 
-  while (*str >= 48 && *str <= 57)
+  while (*s >= '0' && *s <= '9')
   {
-    i = i * 10 + (*str - 48);
-    str++;
+    r = r * 10 + *s - '0';
+    s++;
   }
-  return (i * negative);
+  return (sign * r);
 }
