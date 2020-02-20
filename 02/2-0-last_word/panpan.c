@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     {
       if (argv[1][i] != ' ' && argv[1][i] != '\t')
       {
-        if (i == 0 || argv[1][i -1] == ' ' || argv[1][i] != '\t')
+        if (i == 0 || argv[1][i - 1] == ' ' || argv[1][i - 1] != '\t')
           index = i;
       }
       i++;
