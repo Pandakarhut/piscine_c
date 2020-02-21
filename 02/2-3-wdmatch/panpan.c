@@ -7,7 +7,7 @@ void wdmatch(char *s1, char *s1)
 
   while (s1[len])
     len++;
-  while (*s2 ** i < len)
+  while (*s2 && i < len)
   {
     if (*s2 == s1[i])
       i++;
