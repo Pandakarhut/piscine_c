@@ -14,11 +14,11 @@ char	*ft_strcpy(char *s1, char *s2)
 {
 	int i;
 	i = 0;
-	while (src[i])
+	while (s2[i])
 	{
-		dest[i] = src[i];
+		s1[i] = s2[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	s1[i] = '\0';
+	return (s1);
 }
