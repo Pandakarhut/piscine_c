@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void wdmatch(char *s1, char *s1)
+void wdmatch(char *s1, char *s2)
 {
   int len = 0;
   int i = 0;
