@@ -1,11 +1,11 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-  if (argc == 2)
+  if (ac == 2)
   {
-    while(*argv[1] != ' ' && *argv[1] != '\t' && *argv[1])
-      write(1, argv[1]++, 1);
+    while(*av[1] != ' ' && *av[1] != '\t' && *av[1])
+      write(1, av[1]++, 1);
   }
   write(1, "\n", 1);
   return(0);
