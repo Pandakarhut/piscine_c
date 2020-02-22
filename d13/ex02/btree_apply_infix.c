@@ -1,0 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   btree_apply_infix.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jtian <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/21 20:09:00 by jtian             #+#    #+#             */
+/*   Updated: 2020/02/21 20:12:08 by jtian            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_btree.h"
+
+void	btree_apply_infix(t_btree *root, void (*applyf)(void *))
+{
+	if (!root)
+		return ;
+	btree_apply_infix(root->left, applyf);
+	(*applyf)(root->item);
+	btree_apply_infix(root->right, applyf);
+}
