@@ -12,10 +12,10 @@ int main(int argc, char **argv)
   {
     while (argv[2][j])
     {
-      if (argv[1][i] == argv[2][j] && characters[argv[1][i]] != 1)
+      if (argv[1][i] == argv[2][j] && characters[(int)argv[1][i]] != 1)
       {
         write(1, &(argv[1][i]), 1);
-        characters[argv[1][i]] = 1;
+        characters[(int)argv[1][i]] = 1;
       }
       j++;
     }
