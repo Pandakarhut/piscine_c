@@ -39,5 +39,6 @@ int		main(int ac, char **av)
 			av[1]++;
 		}
 	}
-	ft_putchar('\n');
+	write(1, "\n", 1);
+	return (0);
 }
