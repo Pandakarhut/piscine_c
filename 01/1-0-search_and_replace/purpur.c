@@ -12,9 +12,9 @@ int main(int argc, char **argv)
       }
   }
   write(1, "\n", 1);
+  return (0);
 }
 
-int main
 
 if correct amoutn of arguments:
   if also argument 2 and 3 are just one character:
