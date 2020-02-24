@@ -16,10 +16,10 @@ int main(int argc, char **argv)
 }
 
 
-if correct amoutn of arguments:
-  if also argument 2 and 3 are just one character:
-    Go through every character of argv[1]
-    For each character, check if the current character is argv[2] character
-    If current=argv[2], then replace argv[1] with argv[3]
-    Loop until end of string
-print newline.
+// if correct amoutn of arguments:
+// if also argument 2 and 3 are just one character:
+// Go through every character of argv[1]
+// For each character, check if the current character is argv[2] character
+// If current=argv[2], then replace argv[1] with argv[3]
+// Loop until end of string
+// print newline. 
