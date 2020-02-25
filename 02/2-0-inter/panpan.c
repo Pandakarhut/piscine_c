@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
   int characters[256] = {};
   int i;
@@ -8,14 +8,14 @@ int main(int argc, char **argv)
   i = 0;
   j = 0;
 
-  while (argc == 3 && argv[1][i])
+  while (ac == 3 && av[1][i])
   {
-    while (argv[2][j])
+    while (av[2][j])
     {
-      if (argv[1][i] == argv[2][j] && characters[(int)argv[1][i]] != 1)
+      if (av[1][i] == av[2][j] && characters[(int)av[1][i]] != 1)
       {
-        write(1, &(argv[1][i]), 1);
-        characters[(int)argv[1][i]] = 1;
+        write(1, &(av[1][i]), 1);
+        characters[(int)av[1][i]] = 1;
       }
       j++;
     }
