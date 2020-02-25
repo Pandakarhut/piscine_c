@@ -16,12 +16,12 @@ int main(int argc, char **argv)
 		while(argv[2][j])
 		{
 			//If the character is also found in the second argument, print it and mark it as printed to the characters array.
-			if(argv[1][i] == argv[2][j] && characters[argv[1][i]] != 1)
+			if(argv[1][i] == argv[2][j] && characters[(int)argv[1][i]] != 1)
 			{
 				write(1, &(argv[1][i]), 1);
 				
 				//Mark the character ASCII code as printed in the characters array.
-				characters[argv[1][i]] = 1;
+				characters[(int)argv[1][i]] = 1;
 			}
 			j++;
 		}
