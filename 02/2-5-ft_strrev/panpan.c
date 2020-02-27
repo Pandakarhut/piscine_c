@@ -5,15 +5,15 @@ char *ft_strrev(char *str)
   char tmp;
   
   i = 0;
-  while (s[i])
+  while (str[i])
     i++;
   i--;
   j = 0;
   while (j < i)
   {
-    tmp = s[i];
-    s[i] = s[j];
-    s[j] = tmp;
+    tmp = str[i];
+    str[i] = str[j];
+    str[j] = tmp;
     i--;
     j++;
   }
