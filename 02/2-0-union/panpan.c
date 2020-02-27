@@ -1,12 +1,12 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
 	int	used[255];
 	int	i;
-  int j;
+  	int 	j;
 
-	if (argc == 3)
+	if (ac == 3)
 	{
 		i = 0;
 		while (i < 255)
@@ -15,12 +15,12 @@ int main(int argc, char **argv)
 		while (i < 3)
 		{
 			j = 0;
-			while (argv[i][j])
+			while (av[i][j])
 			{
-				if (!used[(unsigned char)argv[i][j]])
+				if (!used[(unsigned char)av[i][j]])
 				{
-					used[(unsigned char)argv[i][j]] = 1;
-					write(1, &argv[i][j], 1);
+					used[(unsigned char)av[i][j]] = 1;
+					write(1, &av[i][j], 1);
 				}
 				j++;
 			}
