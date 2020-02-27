@@ -1,4 +1,4 @@
-char *ft_strrev(char *s)
+char *ft_strrev(char *str)
 {
   int i;
   int j;
@@ -17,5 +17,5 @@ char *ft_strrev(char *s)
     i--;
     j++;
   }
-  return (s);
+  return (str);
 }
