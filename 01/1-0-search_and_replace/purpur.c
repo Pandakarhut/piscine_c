@@ -1,14 +1,14 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-  if (argc == 4 && !argv[2][1] && !argv[3][1])
+  if (ac == 4 && !av[2][1] && !av[3][1])
   {
-      while (*argv[1])
+      while (*av[1])
       { 
-        if (*argv[1] == *argv[2])
-          *argv[1] = *argv[3];
-        write(1, argv[1]++, 1);
+        if (*av[1] == *av[2])
+          *av[1] = *av[3];
+        write(1, av[1]++, 1);
       }
   }
   write(1, "\n", 1);
